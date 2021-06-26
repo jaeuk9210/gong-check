@@ -53,6 +53,7 @@
 
     <% if(post.attachment) { %>
       <div class="audio-container fixed-bottom">
+        <audio id="review" src="/files/<%= post.attachment.serverFileName %>/<%= post.attachment.originalFileName %>"></audio>
         <div class="audio-left">
           <div class="info">
             <%= post.author ? post.author.username : "" %> <%= post.title %> - <%= post.book.title %>
@@ -82,16 +83,11 @@
       let timer;
 
       let playing_song = false;
-      let track = document.createElement('audio');
-
-      if(isNaN(<%= post.attachment %>){
-        let review_path = "/files/<%= post.attachment.serverFileName %>/<%= post.attachment.originalFileName %>"
-      }
+      let track = document.querySelector('#review');
 
       function load_track(){
-        track.src = review_path;
         track.load();
-        timer = setInterval(range_slider, 1000)
+        timer = setInterval(range_slider, 1000);
       }
 
       load_track();
