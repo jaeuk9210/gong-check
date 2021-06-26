@@ -1,0 +1,218 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-light mb-3" style="background-color: #e2e2e2;">
+  <a class="navbar-brand h1 mb-0" href="/">공군의 책방</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a data-target="/books?kdc=000" class="nav-link dropdown-toggle" href="/books?kdc=000" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          총류
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=000">총류</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=010">도서학, 서지학</a>
+          <a class="dropdown-item" href="/books?kdc=020">문헌정보학</a>
+          <a class="dropdown-item" href="/books?kdc=030">백과사전</a>
+          <a class="dropdown-item" href="/books?kdc=040">강연집, 수필집, 연설문집</a>
+          <a class="dropdown-item" href="/books?kdc=050">일반연속간생물</a>
+          <a class="dropdown-item" href="/books?kdc=060">일반학회, 단체, 협회, 기관</a>
+          <a class="dropdown-item" href="/books?kdc=070">신문, 언론, 저널리즘</a>
+          <a class="dropdown-item" href="/books?kdc=080">일반전집, 총서</a>
+          <a class="dropdown-item" href="/books?kdc=090">향토자료</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=100" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          철학
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=100">철학</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=110">형이상학</a>
+          <a class="dropdown-item" href="/books?kdc=120">인식론, 인과론, 인간학</a>
+          <a class="dropdown-item" href="/books?kdc=130">철학의 체계</a>
+          <a class="dropdown-item" href="/books?kdc=140">경학</a>
+          <a class="dropdown-item" href="/books?kdc=150">동양척학, 사상</a>
+          <a class="dropdown-item" href="/books?kdc=160">서양철학</a>
+          <a class="dropdown-item" href="/books?kdc=170">논리학</a>
+          <a class="dropdown-item" href="/books?kdc=180">심리학</a>
+          <a class="dropdown-item" href="/books?kdc=190">윤리학, 도덕철학</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=200" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          종교
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=200">종교</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=210">비교종교</a>
+          <a class="dropdown-item" href="/books?kdc=220">불교</a>
+          <a class="dropdown-item" href="/books?kdc=230">기독교</a>
+          <a class="dropdown-item" href="/books?kdc=240">도교</a>
+          <a class="dropdown-item" href="/books?kdc=250">천도교</a>
+          <a class="dropdown-item" href="/books?kdc=260">신도</a>
+          <a class="dropdown-item" href="/books?kdc=270">힌두교, 브라만교</a>
+          <a class="dropdown-item" href="/books?kdc=280">이슬람교(회교)</a>
+          <a class="dropdown-item" href="/books?kdc=290">기타 제종교</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=300" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          사회과학
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=300">사회과학</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=310">통계학</a>
+          <a class="dropdown-item" href="/books?kdc=320">경제학</a>
+          <a class="dropdown-item" href="/books?kdc=330">사회학, 사회문제</a>
+          <a class="dropdown-item" href="/books?kdc=340">정치학</a>
+          <a class="dropdown-item" href="/books?kdc=350">행정학</a>
+          <a class="dropdown-item" href="/books?kdc=360">법학</a>
+          <a class="dropdown-item" href="/books?kdc=370">교육학</a>
+          <a class="dropdown-item" href="/books?kdc=380">풍속, 예절, 민속학</a>
+          <a class="dropdown-item" href="/books?kdc=390">국방, 군사학</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=400" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          자연과학
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=400">자연과학</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=410">수학</a>
+          <a class="dropdown-item" href="/books?kdc=420">물리학</a>
+          <a class="dropdown-item" href="/books?kdc=430">화학</a>
+          <a class="dropdown-item" href="/books?kdc=440">천문학</a>
+          <a class="dropdown-item" href="/books?kdc=450">지학</a>
+          <a class="dropdown-item" href="/books?kdc=460">광물학</a>
+          <a class="dropdown-item" href="/books?kdc=470">생명과학</a>
+          <a class="dropdown-item" href="/books?kdc=480">식물학</a>
+          <a class="dropdown-item" href="/books?kdc=490">동물학</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=500" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          기술과학
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=500">기술과학</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=510">의학</a>
+          <a class="dropdown-item" href="/books?kdc=520">농업, 농학</a>
+          <a class="dropdown-item" href="/books?kdc=530">공학, 공업일반, 토목공학, 환경공학</a>
+          <a class="dropdown-item" href="/books?kdc=540">건축공학</a>
+          <a class="dropdown-item" href="/books?kdc=550">기계공학</a>
+          <a class="dropdown-item" href="/books?kdc=560">전기공학, 전자고학</a>
+          <a class="dropdown-item" href="/books?kdc=570">화학공학</a>
+          <a class="dropdown-item" href="/books?kdc=580">제조업</a>
+          <a class="dropdown-item" href="/books?kdc=590">생활가학</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=600" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          예술
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=600">예술</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=610">건축물</a>
+          <a class="dropdown-item" href="/books?kdc=620">조각, 조형예술</a>
+          <a class="dropdown-item" href="/books?kdc=630">공예, 장식미술</a>
+          <a class="dropdown-item" href="/books?kdc=640">서예</a>
+          <a class="dropdown-item" href="/books?kdc=650">회화, 도화</a>
+          <a class="dropdown-item" href="/books?kdc=660">사진예술</a>
+          <a class="dropdown-item" href="/books?kdc=670">음악</a>
+          <a class="dropdown-item" href="/books?kdc=680">공연예술, 매체예술</a>
+          <a class="dropdown-item" href="/books?kdc=690">오락, 스포츠</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=700" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          언어
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=700">언어</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=710">한국어</a>
+          <a class="dropdown-item" href="/books?kdc=720">중국어</a>
+          <a class="dropdown-item" href="/books?kdc=730">일본어, 기타아시아제어</a>
+          <a class="dropdown-item" href="/books?kdc=740">영어</a>
+          <a class="dropdown-item" href="/books?kdc=750">독일어</a>
+          <a class="dropdown-item" href="/books?kdc=760">프랑스어</a>
+          <a class="dropdown-item" href="/books?kdc=770">생스페인어, 포르투갈어</a>
+          <a class="dropdown-item" href="/books?kdc=780">이탈리아어</a>
+          <a class="dropdown-item" href="/books?kdc=790">기타제어</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=800" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          문학
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=800">문학</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=810">한국문학</a>
+          <a class="dropdown-item" href="/books?kdc=820">중국문학</a>
+          <a class="dropdown-item" href="/books?kdc=830">일본문학, 기타아시아문학</a>
+          <a class="dropdown-item" href="/books?kdc=840">영미문학</a>
+          <a class="dropdown-item" href="/books?kdc=850">독일문학</a>
+          <a class="dropdown-item" href="/books?kdc=860">프랑스문학</a>
+          <a class="dropdown-item" href="/books?kdc=870">스페인, 포르투갈문학</a>
+          <a class="dropdown-item" href="/books?kdc=880">이탈리아문학</a>
+          <a class="dropdown-item" href="/books?kdc=890">기타제문학</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/books?kdc=900" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          역사
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/books?kdc=900">역사</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/books?kdc=910">아시아</a>
+          <a class="dropdown-item" href="/books?kdc=920">유럽</a>
+          <a class="dropdown-item" href="/books?kdc=930">아프리카</a>
+          <a class="dropdown-item" href="/books?kdc=940">북아메리카</a>
+          <a class="dropdown-item" href="/books?kdc=950">남아메리카</a>
+          <a class="dropdown-item" href="/books?kdc=960">오세아니아</a>
+          <a class="dropdown-item" href="/books?kdc=970">양극지방</a>
+          <a class="dropdown-item" href="/books?kdc=980">지리</a>
+          <a class="dropdown-item" href="/books?kdc=990">전기</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <% if(isAuthenticated && currentUser.group === "Admin"){ %>
+        <li class="nav-item"><a href="/books/new" class="nav-link">도서 추가</a></li>
+        <li class="nav-item"><a href="/users/<%= currentUser.username %>" class="nav-link"><%= currentUser.username%></a></li>
+        <li class="nav-item"><a href="/logout" class="nav-link">로그아웃</a></li>
+      <% } else if(isAuthenticated) {%>
+        <li class="nav-item"><a href="/users/<%= currentUser.username %>" class="nav-link"><%= currentUser.username%></a></li>
+        <li class="nav-item"><a href="/logout" class="nav-link">로그아웃</a></li>
+      <% } else { %>
+        <li class="nav-item"><a href="/users/new" class="nav-link">회원가입</a></li>
+        <li class="nav-item"><a href="/login" class="nav-link">로그인</a></li>
+      <% } %>
+      <form action="books" name="search" class="input-group" method="get">
+        <input minLength="3" type="text" name="searchText">
+        <div class="input-group-append">
+          <button class="btn btn-outline-primary" type="submit">검색</button>
+        </div>
+      </form>
+    </ul>
+  </div>
+</nav>

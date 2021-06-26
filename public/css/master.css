@@ -1,0 +1,268 @@
+body {
+  background: #e2e2e2;
+}
+
+.audio-container{
+  padding: 1rem;
+  background-color: #e2e2e2;
+  box-shadow: 0px 0px 20px 0px gray;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+a{
+  color: #5f5f5f;
+}
+
+a:hover{
+  color: #5f5f5f;
+  text-decoration: none;
+}
+
+.book-detail{
+  display: flex;
+}
+
+.book-left{
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.book-right{
+  flex-grow: 1;
+}
+
+.bookinfo{
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #f2f2f2;
+  background-clip: border-box;
+  border-radius: 20px;
+}
+
+.breadcrumb-toolbar {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  justify-content: space-between;
+}
+
+.btn{
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: .25rem .5rem;
+}
+
+.btn-primary {
+    color: #d6d6d6;
+    background-color: #5f5f5f;
+    border-color: #5f5f5f;
+}
+
+.btn-primary:hover {
+    color: #d6d6d6;
+    background-color: #5f5f5f;
+    border-color: #5f5f5f;
+}
+
+.breadcrumb {
+  width: 100%;
+  background-color: #d6d6d6;
+  border-radius: 5px;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #e2e2e2!important;
+}
+
+.breadcrumb-item.active {
+  color: #5f5f5f;
+}
+
+.navbar {
+  background-color: #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 20px 0px gray;
+}
+
+.search-box{
+  display: flex;
+  background: #d6d6d6;
+  height: 35px;
+  width: 145px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-btn{
+  font-family: FontAwesome;
+  color: #5f5f5f;
+  width: 35px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  color: #5f5f5f;
+  text-decoration: none;
+}
+
+.search-txt{
+  width: 100px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  font-size: 16px;
+  color: #5f5f5f;
+  transition: 0.4s;
+}
+
+.post-index-tool {
+  max-width: 450px;
+}
+.post-index-tool input[type='text']{
+  max-width: 130px;
+}
+
+.gallery{
+  padding: 1.5rem;
+}
+
+.grid-container {
+  margin: 2rem;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas:  'jinjung reviewRank'
+                        'jinjung reviewRank'
+                        'ebook reviewRank'
+                        'ebook mylib'
+                        'dodLib mylib'
+                        'dodLib mylib';
+}
+
+#jinjung {
+  background-color: #f2f2f2;
+  grid-area: jinjung;
+  border-radius: 20px;
+}
+
+#ebook {
+  background-color: #f2f2f2;
+  grid-area: ebook;
+  border-radius: 20px;
+}
+
+#dodLib {
+  background-color: #f2f2f2;
+  grid-area: dodLib;
+  border-radius: 20px;
+}
+
+.jinjung, .ebook, .dodLib{
+  display: flex;
+  gap: 1rem;
+}
+
+.home-card{
+  height: 285px;
+  border-radius: 5px;
+  width: 170px;
+  margin-right: 10px;
+}
+
+.home-card img{
+  height: 245px;
+}
+
+#reviewRank {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  grid-area: reviewRank;
+  border-radius: 20px;
+}
+
+#mylib {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  grid-area: mylib;
+  border-radius: 20px;
+}
+
+.mylib{
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+  .grid-container {
+    grid-template-areas:  'jinjung'
+                          'ebook'
+                          'dodLib'
+                          'reviewRank'
+                          'mylib';
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 8px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .grid-container {
+    grid-template-areas:  'jinjung'
+                          'ebook'
+                          'dodLib'
+                          'reviewRank'
+                          'mylib';
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 8px;
+  }
+}
+
+.like img {cursor: pointer;}

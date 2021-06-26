@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+    <title>공군의 책방</title>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="grid-container">
+      <div class="gallery" id="jinjung" style="overflow:auto;">
+        <h5 class="mb-3">이달의 진중문고</h5>
+        <div class="jinjung">
+          <% if (isNaN(jinjung)) { %>
+            <% jinjung.forEach(function(book) { %>
+              <div class="card mb-1 home-card" style="width: 10rem; cursor:pointer;" onclick="location.href='/books/<%= book._id%>';">
+                  <img class="card-img-top" src="<%= book.cover %>">
+                  <div class="card-body p-2" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">
+                    <a><h7 class="card-title ellipsis"><%= book.title %></h7></a>
+                  </div>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <p>등록된 도서가 없습니다.</p>
+          <% } %>
+          <div class="card mb-1 home-card" style="width: 10rem; cursor:pointer;" onclick="location.href='/books';">
+            <div class="card-body p-2" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">
+              <a><h7 class="card-title ellipsis">더보기</h7></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery" id="ebook">
+        <h5 class="mb-3">국방전자도서관</h5>
+        <div class="ebook">
+          <% if (isNaN(ebook)) { %>
+            <% ebook.forEach(function(book) { %>
+              <div class="card mb-1 home-card" style="width: 10rem; cursor:pointer;" onclick="location.href='/books/<%= book._id%>';">
+                  <img class="card-img-top" src="<%= book.cover %>">
+                  <div class="card-body p-2" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">
+                    <a><h7 class="card-title ellipsis"><%= book.title %></h7></a>
+                  </div>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <p>등록된 도서가 없습니다.</p>
+          <% } %>
+          <div class="card mb-1 home-card" style="width: 10rem; cursor:pointer;" onclick="location.href='/books';">
+            <div class="card-body p-2" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">
+              <a><h7 class="card-title ellipsis">더보기</h7></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery" id="dodLib">
+        <h5 class="mb-3">국방부 병영도서관</h5>
+        <div class="dodLib">
+          <% if (isNaN(dodlib)) { %>
+            <% dodlib.forEach(function(book) { %>
+              <div class="card mb-1 home-card" style="width: 10rem; cursor:pointer;" onclick="location.href='/books/<%= book._id%>';">
+                <img class="card-img-top" src="<%= book.cover %>">
+                <div class="card-body p-2" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">
+                  <a><h7 class="card-title ellipsis"><%= book.title %></h7></a>
+                </div>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <p>등록된 도서가 없습니다.</p>
+          <% } %>
+          <div class="card mb-1 home-card" style="width: 10rem; cursor:pointer;" onclick="location.href='/books';">
+            <div class="card-body p-2" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">
+              <a><h7 class="card-title ellipsis">더보기</h7></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery" id="reviewRank">
+        <h4>듣는 독후감 순위</h4>
+      </div>
+      <div class="gallery" id="mylib">
+        <h4>내 서재</h4>
+        <% if (isNaN(post)) { %>
+          <div class="mylib">
+            <% post.forEach(function(post) { %>
+              <div class="card m-1 home-card" style="width: 10rem; cursor:pointer;" onclick="location.href='/books/<%= post.book._id%>';">
+                  <img class="card-img-top" src="<%= post.book.cover %>">
+                  <div class="card-body p-2" style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">
+                    <a><h7 class="card-title ellipsis"><%= post.book.title %></h7></a>
+                  </div>
+              </div>
+            <% }) %>
+          </div>
+        <% } else { %>
+          <p>등록한 리뷰가 없습니다.</p>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

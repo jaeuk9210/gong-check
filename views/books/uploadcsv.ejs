@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container mb-3">
+
+      <form action="/uploadcsv" enctype="multipart/form-data" method="post">
+        
+        <div class="form-group">
+          <label for="attachment">첨부파일</label>
+          <input type="file" name="attachment" class="form-control-file" id="attachment">
+        </div>
+
+        <% if(errors.unhandled){ %>
+          <div class="invalid-feedback d-block">
+            <%= errors.unhandled %>
+          </div>
+        <% } %>
+        
+        <div>
+          <a class="btn btn-primary" href="/posts">돌아가기</a>
+          <button type="submit" class="btn btn-primary">업로드</button>
+        </div>
+
+      </form>
+
+    </div>
+  </body>
+</html>

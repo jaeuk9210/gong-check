@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container mb-3">
+
+      <h2 class="mb-3">이달의 진중문고</h2>
+
+      <table class="board-table table table-sm border-bottom">
+
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">제목</th>
+            <th scope="col" class="author">저자</th>
+            <th scope="col" class="publisher">출판사</th>
+            <th scope="col" class="year">출판연도</th>
+            <th scope="col" class="kdc">KDC</th>
+            <th scope="col" class="type">종류</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if(jinjung == null || jinjung.length == 0){ %>
+            <tr>
+              <td colspan=2> 등록된 책이 없습니다 :( </td>
+            </tr>
+          <% } %>
+          <% jinjung.forEach(function(book) { %>
+            <tr>
+              <td>
+                <a href="/books/<%= book._id %>"><div class="ellipsis"><%= book.title %></div></a>
+              </td>
+              <td>
+                <a><%= book.author %></a>
+              </td>
+              <td>
+                <a><%= book.publisher %></a>
+              </td>
+              <td>
+                <a><%= book.year %></a>
+              </td>
+              <td>
+                <a><%= book.kdc %></a>
+              </td>
+              <td>
+                <a><%= book.type %></a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+      <h2 class="mb-3">국방전자도서관</h2>
+
+      <table class="board-table table table-sm border-bottom">
+
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">제목</th>
+            <th scope="col" class="author">저자</th>
+            <th scope="col" class="publisher">출판사</th>
+            <th scope="col" class="year">출판연도</th>
+            <th scope="col" class="kdc">KDC</th>
+            <th scope="col" class="type">종류</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if(ebook == null || ebook.length == 0){ %>
+            <tr>
+              <td colspan=2> 등록된 책이 없습니다 :( </td>
+            </tr>
+          <% } %>
+          <% ebook.forEach(function(book) { %>
+            <tr>
+              <td>
+                <a href="/books/<%= book._id %>"><div class="ellipsis"><%= book.title %></div></a>
+              </td>
+              <td>
+                <a><%= book.author %></a>
+              </td>
+              <td>
+                <a><%= book.publisher %></a>
+              </td>
+              <td>
+                <a><%= book.year %></a>
+              </td>
+              <td>
+                <a><%= book.kdc %></a>
+              </td>
+              <td>
+                <a><%= book.type %></a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+    </div>
+  </body>
+</html>

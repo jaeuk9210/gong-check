@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+    <title>사용자 목록 | 공군의 책방</title>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container mb-3">
+
+      <h3 class="mb-3">Users</h3>
+
+      <ul class="list-group">
+        <% if(users == null || users.length == 0){ %>
+          <li class="list-group-item"> 가입된 회원이 없습니다.</li>
+        <% } %>
+        <% users.forEach(function(user) { %>
+          <li class="list-group-item">
+            <a href="/users/<%= user.username %>"><%= user.username %></a>
+          </li>
+        <% }) %>
+      </ul>
+
+    </div>
+  </body>
+</html>

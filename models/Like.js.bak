@@ -1,0 +1,12 @@
+//좋아요 DB
+var mongoose = require('mongoose');
+
+var likeSchema = mongoose.Schema({
+  book      :{type:mongoose.Schema.Types.ObjectID, ref:'book', required:true},  //좋아요를 누른 리뷰의 도서
+  review    :{type:mongoose.Schema.Types.ObjectID, ref:'book', required:true},  //좋아요를 누른 리뷰
+  author    :{type:mongoose.Schema.Types.ObjectID, ref:'user', required:true},  //좋아요를 누른 사람
+  createdAt :{type:Date, default:Date.now}                                      //좋아요를 누른 시각
+}, {versionKey : false});
+
+var Like = mongoose.model('like', likeSchema);
+module.exports = Post;
