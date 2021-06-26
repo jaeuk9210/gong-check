@@ -33,7 +33,7 @@
           <% books.forEach(function(book) { %>
             <tr>
               <td>
-                <a href="/books/<%= book._id %>"><div class="ellipsis"><%= book.title %></div></a>
+                <a href="/books/<%= book._id %>"><div class="ellipsis"><b><%= book.title %></b></div></a>
               </td>
               <td>
                 <a><%= book.author %></a>
