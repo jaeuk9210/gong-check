@@ -84,7 +84,7 @@
       let playing_song = false;
       let track = document.createElement('audio');
 
-      if(isNaN(<%= post.attachment.serverFileName %>){
+      if(isNaN(<%= post.attachment %>){
         let review_path = "/files/<%= post.attachment.serverFileName %>/<%= post.attachment.originalFileName %>"
       }
 
