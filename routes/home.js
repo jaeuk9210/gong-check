@@ -1,5 +1,4 @@
-
- var express = require('express');
+var express = require('express');
 var router = express.Router();
 var Book = require('../models/Book');
 var Post = require('../models/Post');
@@ -12,6 +11,30 @@ router.get('/', async function(req, res) {
 	//국방전자도서관 5개 랜덤 추출
 	var ebook = await divisionBook('국방전자도서관');
 	var dodlib = await divisionBook('국방전자도서관');
+
+  var rank = await Post.aggregate([
+    {
+      $group : {
+        _id: "$book",
+        num_post : {$sum:1},
+        reviews_title : {$push : "$title"},
+        reviews_id : {$push : "$_id"}
+      }
+    },
+    {
+      $sort : {num_post :-1}
+    },
+    { $limit: 3 },
+    {
+      $lookup : {
+        "from": "books",
+        "localField": "_id",
+        "foreignField": "_id",
+        "as": "books"
+      }
+    }
+  ]);
+
 	var review=[];
 	if (req.isAuthenticated()) {
     Promise.all([
@@ -22,6 +45,7 @@ router.get('/', async function(req, res) {
         jinjung: jinjung,
         ebook: ebook,
         dodlib: dodlib,
+        rank: rank,
         post: review
       });
     })
@@ -34,6 +58,7 @@ router.get('/', async function(req, res) {
       jinjung: jinjung,
       ebook: ebook,
       dodlib: dodlib,
+      rank: rank,
       post: review
     });
   }

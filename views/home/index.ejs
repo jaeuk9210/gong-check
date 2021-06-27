@@ -74,10 +74,23 @@
           </div>
         </div>
       </div>
-      <div class="gallery" id="reviewRank">
-        <h4>듣는 독후감 순위</h4>
+      <div class="gallery" id="reviewRank" height="585.5px">
+        <h4>독후감 순위</h4>
+        <% rank.forEach((book, i) => { %>
+          <div class="review-rank">
+            <div class="book-left" style="cursor:pointer;" onclick="location.href='/books/<%= book.books[0]._id%>';">
+              <img src="<%= book.books[0].cover %>" style="width: 10rem; height=245px; border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+            </div>
+            <div class="book-right" style="margin: 0.5rem;">
+              <h5 style="cursor:pointer;" onclick="location.href='/books/<%= book.books[0]._id%>';"><b><%= i + 1 %>위 <%= book.books[0].title %></b></h5>
+              <% book.reviews_title.forEach((post, i) => { %>
+                <div><a href="/posts/<%= book.reviews_id[i] %>"><%= post %></a></div>
+              <% }) %>
+            </div>
+          </div>
+        <% }) %>
       </div>
-      <div class="gallery" id="mylib">
+      <div class="gallery" id="mylib" height="585.5px">
         <h4>내 서재</h4>
         <% if (isNaN(post)) { %>
           <div class="mylib">

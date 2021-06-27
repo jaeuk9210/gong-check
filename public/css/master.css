@@ -9,11 +9,17 @@ body {
 }
 
 .fixed-bottom {
-    position: fixed;
+    position: sticky;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1030;
+}
+
+.book-list {
+  padding: 16px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
 }
 
 .material-icons {
@@ -52,6 +58,13 @@ a:hover{
 
 .book-detail{
   display: flex;
+}
+
+.review-rank{
+  background: #eee;
+  display: flex;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
 }
 
 .book-left{
@@ -220,15 +233,16 @@ a:hover{
 
 #reviewRank {
   width: 100%;
-  height: 100%;
+  height: 585.5px;
   background-color: #f2f2f2;
   grid-area: reviewRank;
   border-radius: 20px;
+  overflow: auto;
 }
 
 #mylib {
   width: 100%;
-  height: 100%;
+  height: 585.5px;
   background-color: #f2f2f2;
   grid-area: mylib;
   border-radius: 20px;
