@@ -83,8 +83,9 @@
             </div>
             <div class="book-right" style="margin: 0.5rem;">
               <h5 style="cursor:pointer;" onclick="location.href='/books/<%= book.books[0]._id%>';"><b><%= i + 1 %>위 <%= book.books[0].title %></b></h5>
-              <% book.reviews_title.forEach((post, i) => { %>
+              <% book.reviews_title.forEach((post, i, arr) => { %>
                 <div><a href="/posts/<%= book.reviews_id[i] %>"><%= post %></a></div>
+                <% if(i >= 6) {arr.length = i + 1}%>
               <% }) %>
             </div>
           </div>
