@@ -5,6 +5,11 @@ let now_time = document.querySelector('#now_time');
 let total_time = document.querySelector('#total_time');
 let slider = document.querySelector('#duration_slider');
 
+let body = document.querySelector('.container-fluid');
+let audio_box = document.querySelector('.audio-container');
+
+body.style.marginBottom = "calc(" + audio_box.offsetHeight + "px + 1rem)";
+
 let timer;
 
 let playing_song = false;
