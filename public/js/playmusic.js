@@ -33,13 +33,13 @@ function play(){
 function playsong(){
   track.play();
   playing_song = true;
-  play_btn.innerHTML = '<i class="fas fa-pause"></i>'
+  play_btn.innerHTML = '<span class="material-icons">pause</span>'
 }
 
 function pausesong(){
   track.pause();
   playing_song = false;
-  play_btn.innerHTML = '<i class="fas fa-play"></i>'
+  play_btn.innerHTML = '<span class="material-icons">play_arrow</span>'
 }
 
 function change_duration(){

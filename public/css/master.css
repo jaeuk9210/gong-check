@@ -38,7 +38,7 @@ body {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 1.5rem;  /* Preferred icon size */
+  font-size: 2rem;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -78,6 +78,16 @@ a:hover{
   background-clip: border-box;
   padding: 1rem;
   border-radius: 20px;
+  display: flex;
+}
+
+.review-right{
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.review-left{
+  flex-grow: 1;
 }
 
 .review-rank{
@@ -101,6 +111,8 @@ a:hover{
 }
 
 .audio-right{
+  display: flex;
+  align-self: center;
   flex-shrink: 0;
 }
 
@@ -157,6 +169,39 @@ a:hover{
   width: 100%;
   background-color: #d6d6d6;
   border-radius: 5px;
+}
+.duration{
+  display: flex;
+}
+
+.like-group{
+  display: flex;
+  align-items: center;
+}
+
+#duration_slider{
+  margin: 0 5px;
+  width: 100%;
+}
+
+#edit-btn, #delete-btn{
+  width: 100%;
+  margin: 0.3rem 0;
+  border-radius: 20px;
+}
+
+#like-btn, #unlike-btn{
+  background-color: transparent;
+  border: 0px transparent solid;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#pre, #play, #next{
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px transparent solid;
+  font-size: 1.5rem
 }
 
 .border-bottom {
