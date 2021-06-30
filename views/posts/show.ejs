@@ -65,6 +65,9 @@
                 <button id="unlike-btn" type="submit"><i class="fas fa-thumbs-up"></i></button>
               </form>
             <% } %>
+            <% if (!isAuthenticated){ %>
+              <i class="far fa-thumbs-up" style="margin-right: 5px;"></i>
+            <% } %>
             <%= (post.likes.toString().split(",")[0] != "") ? post.likes.toString().split(",").length : "0" %>
           </div>
         </div>

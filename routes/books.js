@@ -222,7 +222,7 @@ module.exports = router;
 
 function createSearchQuery(queries){ // 4
   var searchQuery = {};
-  if(queries.searchText && queries.searchText.length >= 3 || queries.kdc){
+  if(queries.searchText && queries.searchText.length >= 2 || queries.kdc){
     
     if(queries.searchType){
       var searchTypes = queries.searchType.toLowerCase().split(',');
