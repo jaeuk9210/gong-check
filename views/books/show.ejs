@@ -49,54 +49,57 @@
               <h6>KDC</h6>
               <b><%= book.kdc %></b>
             </div>
-            <% if(book.intro) { %>
-              <div class="book-body p-2">
+            <div class="book-body p-2">
+              <% if(book.intro) { %>
                 <h6>소개</h6>
                 <%= book.intro %>
-              </div>
-            <% } %>
+              <% } %>
+              
+            </div>
           </div>
         </div>
       </div>
 
-      <h4 class="mt-3">리뷰</h4>
+      <div class="review_list">
+        <h4>리뷰</h4>
 
-      <% if(posts.length){ %> <!-- 1-1 -->
-        <table class="board-table table table-sm border-bottom">
+        <% if(posts.length){ %> <!-- 1-1 -->
+          <table class="board-table table table-sm border-bottom">
 
-        <thead class="thead-light">
-          <tr>
-            <th scope="col">제목</th>
-            <th scope="col" class="author">작성자</th>
-            <th scope="col" class="date">날짜</th>
-            <th scopr="col" class="like">추천수</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% posts.forEach(function(post) { %>
+          <thead class="thead-light">
             <tr>
-              <td>
-                <a href="/posts/<%= post._id %>"><div class="ellipsis"><%= post.title %></div></a>
-              </td>
-              <td class="author">
-                <div class="ellipsis"><%= post.author ? post.author.username : "" %></div>
-              </td>
-              <td class="date">
-                <span data-date="<%= post.createdAt %>"></span>
-              </td>
-              <td class="like">
-                <div class="ellipsis"><%= post.likes ? post.likes.toString().split(",").length : "0" %></div>
-              </td>
+              <th scope="col">제목</th>
+              <th scope="col" class="author">작성자</th>
+              <th scope="col" class="date">날짜</th>
+              <th scopr="col" class="like">추천수</th>
             </tr>
-          <% }) %>
-        </tbody>
+          </thead>
 
-      </table>
-      <% } %>
+          <tbody>
+            <% posts.forEach(function(post) { %>
+              <tr>
+                <td>
+                  <a href="/posts/<%= post._id %>"><div class="ellipsis"><%= post.title %></div></a>
+                </td>
+                <td class="author">
+                  <div class="ellipsis"><%= post.author ? post.author.username : "" %></div>
+                </td>
+                <td class="date">
+                  <span data-date="<%= post.createdAt %>"></span>
+                </td>
+                <td class="like">
+                  <div class="ellipsis"><%= (post.likes.toString().split(",")[0] != "") ? post.likes.toString().split(",").length : "0" %></div>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
 
-      <div class="mt-3"> <!-- 2 -->
-        <a class="btn btn-primary" href="/posts/new?bookId=<%= book._id %>">작성</a>
+        </table>
+        <% } %>
+
+        <div class="mt-3"> <!-- 2 -->
+          <a class="btn btn-primary" href="/posts/new?bookId=<%= book._id %>">작성</a>
+        </div>
       </div>
 
     </div>
