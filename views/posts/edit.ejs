@@ -8,7 +8,7 @@
     <%- include('../partials/nav') %>
 
     <div class="container mb-3">
-      <form action="/posts/<%= post._id %>?_method=put" method="post">
+      <form action="/posts/<%= post._id %>?_method=put<%= getPostQueryString(true) %>" enctype="multipart/form-data" method="post">
 
         <div class="form-group">
           <label for="title">제목</label>
@@ -16,6 +16,21 @@
           <% if(errors.title){ %>
             <span class="invalid-feedback"><%= errors.title.message %></span>
           <% } %>
+        </div>
+
+        <div class="form-group">
+          <label for="title">첨부파일</label>
+
+          <input type="hidden" id="attachment" name="attachment" value="<%= post.attachment?post.attachment._id:'' %>">
+          <% if(post.attachment){ %>
+            <div class="input-group mb-3" id="currentAttachemnt">
+              <input type="text" class="form-control" value="<%= post.attachment.originalFileName %>" readonly />
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="$('#attachment').val('');$('#currentAttachemnt').hide();$('#newAttachment').removeClass('d-none');">Delete</button>
+              </div>
+            </div>
+          <% } %>
+          <input type="file" id="newAttachment" class="form-control-file <%= post.attachment?'d-none':'' %>" name="newAttachment">
         </div>
 
         <div class="form-group">
