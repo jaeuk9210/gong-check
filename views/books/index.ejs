@@ -42,7 +42,7 @@
             <% books.forEach(function(book) { %>
               <tr>
                 <td>
-                  <a href="/books/<%= book._id %>"><div class="ellipsis"><b><%= book.title %></b></div></a>
+                  <a href="/books/<%= book._id %><%= getPostQueryString() %>"><div class="ellipsis"><b><%= book.title %></b></div></a>
                 </td>
                 <td>
                   <a><%= book.author %></a>
@@ -93,7 +93,6 @@
       </nav>
       <form action="/books" method="get" class="post-index-tool">
         <div class="form-row">
-
           <div class="form-group col-3">
             <label>보기</label>
             <select name="limit" class="custom-select" onchange="this.parentElement.parentElement.parentElement.submit()">
@@ -103,6 +102,8 @@
             </select>
           </div>
         </div>
+        <input type="hidden" name="kdc" value="<%= kdc %>" />
+        <input type="hidden" name="searchText" value="<%= searchText %>" />
       </form>
     </div>
   </body>

@@ -22,6 +22,8 @@ router.get('/', async function(req, res){
   page = !isNaN(page)?page:1;
   limit = !isNaN(limit)?limit:10;
 
+  var kdc = !isNaN(req.query.kdc)?req.query.kdc:"";
+
   var searchQuery = createSearchQuery(req.query);
   
   //DB검색 후 출력
@@ -32,6 +34,7 @@ router.get('/', async function(req, res){
   var maxPage = Math.ceil(count/limit);
   var books = await Book.find(searchQuery)
     .sort('kdc')
+    .sort('title')
     .skip(skip)
     .limit(limit)
     .exec();
@@ -42,7 +45,8 @@ router.get('/', async function(req, res){
     maxPage:maxPage,
     limit:limit,
     searchType:req.query.searchType,
-    searchText:req.query.searchText
+    searchText:req.query.searchText,
+    kdc: kdc
   });
 });
 
@@ -56,7 +60,7 @@ router.post('/', util.isLoggedin, function(req, res){
   req.body.author = req.user._id;
   Book.create(req.body, function(err, book){
     if(err) return res.json(err);
-    res.redirect('/books'+res.locals.getPostQueryString(false, { page:1, searchText:'' }));
+      res.redirect('/books'+res.locals.getPostQueryString(false, { page:1, searchText:'' }));
   });
 });
 
@@ -174,7 +178,7 @@ router.get('/:id', async function(req, res){
         });
       });
     });
-    return res.redirect('/books/'+req.params.id);
+    return res.redirect('/books/'+req.params.id+res.locals.getPostQueryString());
   }
 
   var postForm = req.flash('postForm')[0] || {_id: null, form: {}};
@@ -206,7 +210,7 @@ router.put('/:id', function(req, res){
   req.body.updatedAt = Date.now();
   Book.findOneAndUpdate({_id:req.params.id}, req.body, function(err, book){
     if(err) return res.json(err);
-    res.redirect("/books/"+req.params.id);
+    res.redirect("/books/"+req.params.id+res.locals.getPostQueryString());
   });
 });
 
@@ -214,7 +218,7 @@ router.put('/:id', function(req, res){
 router.delete('/:id', function(req, res){
   Book.deleteOne({_id:req.params.id}, function(err){
     if(err) return res.json(err);
-    res.redirect('/books');
+    res.redirect('/books'+res.locals.getPostQueryString());
   });
 });
 

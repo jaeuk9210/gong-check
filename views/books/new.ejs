@@ -10,7 +10,7 @@
 
       <h3 class="contentBoxTop mb-3">도서 추가</h3>
 
-      <form action="/books" method="post">
+      <form action="/books<%= getPostQueryString() %>" method="post">
 
         <div class="form-group row">
           <label for="title" class="col-sm-3 col-form-label">도서명*</label>

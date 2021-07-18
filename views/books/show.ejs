@@ -13,11 +13,11 @@
         <nav aria-label="breadcrumb" style="flex-grow: 1; margin-right:0.5rem;">
           <ol class="breadcrumb p-1 pl-2 pr-2">
             <li class="breadcrumb-item"><a href="/">홈</a></li>
-            <li class="breadcrumb-item"><a href="/books">도서목록</a></li>
+            <li class="breadcrumb-item"><a href="/books<%= getPostQueryString() %>">도서목록</a></li>
             <li class="breadcrumb-item active" aria-current="page"><b><%= book.title %></b></li>
           </ol>
         </nav>
-        <a class="btn btn-primary p-1 pl-2 pr-2" href="/books" style="margin-bottom: 1rem;">돌아가기</a>
+        <a class="btn btn-primary p-1 pl-2 pr-2" href="/books<%= getPostQueryString() %>" style="margin-bottom: 1rem;">돌아가기</a>
       </div>
 
       <div class="p-3 bookinfo">
@@ -79,7 +79,7 @@
             <% posts.forEach(function(post) { %>
               <tr>
                 <td>
-                  <a href="/posts/<%= post._id %>"><div class="ellipsis"><%= post.title %></div></a>
+                  <a href="/posts/<%= post._id %><%= getPostQueryString() %>"><div class="ellipsis"><%= post.title %></div></a>
                 </td>
                 <td class="author">
                   <div class="ellipsis"><%= post.author ? post.author.username : "" %></div>
@@ -98,7 +98,7 @@
         <% } %>
 
         <div class="mt-3"> <!-- 2 -->
-          <a class="btn btn-primary" href="/posts/new?bookId=<%= book._id %>">작성</a>
+          <a class="btn btn-primary" href="/posts/new?bookId=<%= book._id %><%= getPostQueryString() %>">작성</a>
         </div>
       </div>
 
