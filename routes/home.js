@@ -38,7 +38,7 @@ router.get('/', async function(req, res) {
 	var review=[];
 	if (req.isAuthenticated()) {
     Promise.all([
-      Post.find({ author: req.user.id }).populate('book').limit(3)
+      Post.find({ author: req.user.id }).populate('book')
     ])
     .then(([review]) => {
       res.render('home/index', {

@@ -328,9 +328,11 @@ a:hover{
   background-color: #f2f2f2;
   grid-area: mylib;
   border-radius: 20px;
+  overflow: auto;
 }
 
 .mylib{
+  flex-wrap: wrap;
   display: flex;
   gap: 10px;
 }
